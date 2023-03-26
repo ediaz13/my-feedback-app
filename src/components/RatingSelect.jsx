@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-function RatingSelected({select}) {
+function RatingSelect({select}) {
     const [selected, setSelected] = useState(10)
 
     const handleChange = (e) => {
@@ -124,4 +124,4 @@ function RatingSelected({select}) {
     )
 }
 
-export default RatingSelected
+export default RatingSelect
