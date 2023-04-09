@@ -21,16 +21,15 @@ export const FeedbackProvider = ({children}) => {
 
         const data = await response.json()
 
-        console.log(data)
+    setFeedback(data)
+    setIsLoading(false)
+  }
 
-        setIsLoading(faile);
-    }
-    
-    const addFeedback = (newFeedback) => {
-      newFeedback.id = uuidv4();
-      setFeedback([newFeedback, ...feedback]);
-      console.log(newFeedback);
-    };
+  // Add feedback
+  const addFeedback = (newFeedback) => {
+    newFeedback.id = uuidv4()
+    setFeedback([newFeedback, ...feedback])
+  }
 
     const deleteFeedback = (id) => {
       if (window.confirm('Are you sure you want to delete?')) {
